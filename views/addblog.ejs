@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Blogs :: Add ✏️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="window.location.href='/'">Home 🏠︎</button>
+    <button onclick="window.location.href='/admin'">Remove ❌</button>
+    <button>Add ✏️</button>
+    <div class="main">
+        <h2 class="title">Add a Blog...</h2>
+        <center>
+                <form action="/addblog" method="post">
+                    <div class="blog">
+                        <input class="AddTitle" type="text" placeholder="Click to edit the title..." name="title" maxlength="36" required />
+                        <br><br>
+                        <textarea class="AddContent" id="content" placeholder="Click To edit the content..." name="content" rows="6" cols="50" required></textarea>
+                        <div class="rmBtn">
+                            <input type="submit" value="Add ✅" />
+                        </div>
+                        <br>
+                    </div>
+                </form>
+        </center>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('content');
+
+        textarea.addEventListener('input', function () {
+            this.style.height = "auto";
+            this.style.height = this.scrollHeight + "px";
+        });
+
+    </script>
+
+</body>
+</html>

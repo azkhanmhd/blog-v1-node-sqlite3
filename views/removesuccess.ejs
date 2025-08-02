@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="window.location.href='/'">Home 🏠︎</button>
+    <button onclick="window.location.href='/admin'">Remove ❌</button>
+    <button onclick="window.location.href='/addblog'">Add ✏️</button>
+
+    <br>
+    <h2>Blog Deleted Successfully... Redirecting to the Homepage in <label id="time">3</label></h2>
+    
+    <script>
+        let seconds = 3;
+
+        const interval = setInterval(()=>{
+            seconds--;
+            document.getElementById("time").textContent = seconds;
+            if (seconds === 0) {
+                clearInterval(interval);
+                window.location.href="/";
+            }
+        }, 1000);
+
+    </script>
+
+</body>
+</html>

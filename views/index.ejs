@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button>Home 🏠︎</button>
+    <button onclick="window.location.href='/admin'">Remove ❌</button>
+    <button onclick="window.location.href='/addblog'">Add ✏️</button>
+    <div class="main">
+        <h2 class="title">Azk's Blogs</h2>
+        <center>
+
+            <% if(blogs.length === 0){ %>
+
+                <label class="popMsg">No Blogs found! :)</label>
+            
+            <% }else{ %>
+            
+                <% blogs.forEach(blog=>{ %>
+            
+                    <div class="blog">
+                        <label><%- blog.title %></label>
+                        <p><%- blog.content %></p>
+                        <div class="dateOfEach">
+                            <h4 id="timeOf<%- blog.id %>"></h4>
+                        </div>
+                        
+                        <script>
+
+                            // This Script is for Time Thing Ahh Whatever :)
+                            const blogTime<%- blog.id %> = "<%- blog.time %>";
+                            const isoTime<%- blog.id %> = blogTime<%- blog.id %>.replace(" ", "T") + "Z";
+                            const utcDate<%- blog.id %> = new Date(isoTime<%- blog.id %>);
+                            const localDate<%- blog.id %> = new Date(utcDate<%- blog.id %>);
+                            const dateOptions<%- blog.id %> = { hour: '2-digit', minute: '2-digit', hour12: true };
+                            const formatTime<%- blog.id %> = localDate<%- blog.id %>.toLocaleTimeString([], dateOptions<%- blog.id %>);
+                            const formatDate<%- blog.id %> = localDate<%- blog.id %>.toISOString().split('T')[0];
+                            
+                            const finalDate<%- blog.id %> = `${formatDate<%- blog.id %>} :-: ${formatTime<%- blog.id %>}`;
+                            
+                            document.getElementById("timeOf<%- blog.id %>").innerHTML=finalDate<%- blog.id %>;
+                        
+                        </script>
+
+
+                    </div>
+            
+                <% }); %>
+
+            <% } %>
+
+        </center>
+    </div>
+</body>
+</html>

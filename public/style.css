@@ -1,0 +1,103 @@
+body{
+    background-color: #e7d8ff;
+    color: #000000;
+}
+
+.main{
+    text-align: center;
+}
+
+.title{
+    margin-top: 0;
+    text-decoration: underline;
+    color: #534043;
+    font-size: 55px;
+    font-family: cursive;
+}
+
+.blog{
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    width: 60%;
+    height: fit-content;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.blog label{
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.blog p{
+    font-size: 20px;
+    font-family: monospace;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+}
+
+.AddTitle{
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+    width: 80%;
+    text-align: center;
+}
+
+.AddContent{
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.rmBtn{
+    text-align: right;
+    margin-top: -45px;
+}
+
+.rmBtn input{
+    background-color: #fff;
+    color: #000;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: #fff;
+}
+
+.rmBtn input:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: #000000;
+}
+
+button{
+    cursor: pointer;
+}
+
+.popMsg{
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.dateOfEach{
+    text-align: left;
+}
+
+.dateOfEach h4{
+    border: 1px solid #000;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+}
